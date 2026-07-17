@@ -17,8 +17,8 @@
             string codeMeli = Console.ReadLine();
             Console.WriteLine("please enter your card number");
             string cardNumber = Console.ReadLine();
-
-            Console.WriteLine("\nall done");
+            
+            Console.WriteLine("\n************\n**all done**\n************");
         }
     }
 }
