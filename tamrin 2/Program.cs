@@ -191,7 +191,7 @@ namespace tamrin_2
                 Console.Write($"Enter number {i}: ");
                 if (!double.TryParse(Console.ReadLine(), out double num))
                 {
-                    Console.WriteLine("Invalid number! Try again.");
+                    Console.WriteLine("Invalid number! Try again. ");
                     i--; // retry this iteration
                     continue;
                 }
