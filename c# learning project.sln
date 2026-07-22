@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36109.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project 1", "project 1\project 1.csproj", "{B7BB86E1-127F-4AED-B7A7-130002DFEF98}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jalase 1", "project 1\jalase 1.csproj", "{B7BB86E1-127F-4AED-B7A7-130002DFEF98}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jalase 2", "tamrin 2\jalase 2.csproj", "{73B10AB7-D949-49A5-82DF-723320D4EDF7}"
 EndProject
