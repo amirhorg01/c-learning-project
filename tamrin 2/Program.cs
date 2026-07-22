@@ -12,7 +12,7 @@ namespace tamrin_2
 
             while (keepRunning)
             {
-                Console.WriteLine("\n===== EXERCISE MENU =====");
+                Console.WriteLine("\n====== EXERCISE MENU ======");
                 Console.WriteLine("1. Check divisibility of two numbers");
                 Console.WriteLine("2. Check if a number is prime");
                 Console.WriteLine("3. Check if a number is even or odd");
