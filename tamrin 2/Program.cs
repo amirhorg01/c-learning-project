@@ -147,7 +147,7 @@ namespace tamrin_2
         // ========== EXERCISE 3: EVEN OR ODD ==========
         static void Exercise3_EvenOdd()
         {
-            Console.Write("Enter a number: ");
+            Console.Write("\nEnter a number: ");
             if (!int.TryParse(Console.ReadLine(), out int num))
             {
                 Console.WriteLine("Invalid number!");
