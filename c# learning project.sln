@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jalase 1", "project 1\jalas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jalase 2", "tamrin 2\jalase 2.csproj", "{73B10AB7-D949-49A5-82DF-723320D4EDF7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tamrin_temp", "tamrin_temp\tamrin_temp.csproj", "{64DABB7C-86C0-44DA-B747-964C8FA58E30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{73B10AB7-D949-49A5-82DF-723320D4EDF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73B10AB7-D949-49A5-82DF-723320D4EDF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73B10AB7-D949-49A5-82DF-723320D4EDF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64DABB7C-86C0-44DA-B747-964C8FA58E30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64DABB7C-86C0-44DA-B747-964C8FA58E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64DABB7C-86C0-44DA-B747-964C8FA58E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64DABB7C-86C0-44DA-B747-964C8FA58E30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
