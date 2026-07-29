@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jalase 2", "tamrin 2\jalase
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tamrin_temp", "tamrin_temp\tamrin_temp.csproj", "{64DABB7C-86C0-44DA-B747-964C8FA58E30}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "finnal project", "finnal project\finnal project.csproj", "{56ECDB61-5D90-4CB9-8FA8-8299A24FFBE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{64DABB7C-86C0-44DA-B747-964C8FA58E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64DABB7C-86C0-44DA-B747-964C8FA58E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64DABB7C-86C0-44DA-B747-964C8FA58E30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56ECDB61-5D90-4CB9-8FA8-8299A24FFBE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56ECDB61-5D90-4CB9-8FA8-8299A24FFBE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56ECDB61-5D90-4CB9-8FA8-8299A24FFBE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56ECDB61-5D90-4CB9-8FA8-8299A24FFBE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
