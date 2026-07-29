@@ -53,23 +53,119 @@ namespace final_project
         {
             Console.WriteLine("\n--- Add New Student ---");
 
-            Console.Write("First Name: ");
-            string firstName = Console.ReadLine();
+            string firstName = "";
+            while (true)
+            {
+                Console.Write("First Name (at least 3 letters): ");
+                firstName = Console.ReadLine();
 
-            Console.Write("Last Name: ");
-            string lastName = Console.ReadLine();
+                bool isNumber = int.TryParse(firstName, out _);
 
-            Console.Write("Phone Number: ");
-            string phone = Console.ReadLine();
+                if (firstName == null || firstName == "" || firstName.Length < 3 || isNumber)
+                {
+                    Console.WriteLine("Invalid! Name must be at least 3 letters and not a number.");
+                }
+                else
+                {
+                    break;
+                }
+            }
 
-            Console.Write("Card Number: ");
-            string card = Console.ReadLine();
+            string lastName = "";
+            while (true)
+            {
+                Console.Write("Last Name (at least 3 letters): ");
+                lastName = Console.ReadLine();
 
-            Console.Write("National Code: ");
-            string nationalCode = Console.ReadLine();
+                bool isNumber = int.TryParse(lastName, out _);
 
-            Console.Write("Birth Year: ");
-            string birthYear = Console.ReadLine();
+                if (lastName == null || lastName == "" || lastName.Length < 3 || isNumber)
+                {
+                    Console.WriteLine("Invalid! Last name must be at least 3 letters and not a number.");
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            string phone = "";
+            while (true)
+            {
+                Console.Write("Phone Number: ");
+                phone = Console.ReadLine();
+
+                string cleanPhone = phone.Replace(" ", "").Replace("-", "").Replace("_", "");
+                bool isNumber = long.TryParse(cleanPhone, out _);
+
+                if (phone == null || phone == "" || !isNumber)
+                {
+                    Console.WriteLine("Invalid! Phone number must contain only digits.");
+                }
+                else
+                {
+                    phone = FormatPhoneNumber(cleanPhone);
+                    break;
+                }
+            }
+
+            string card = "";
+            while (true)
+            {
+                Console.Write("Card Number (16 digits): ");
+                card = Console.ReadLine();
+
+                string cleanCard = card.Replace(" ", "").Replace("-", "");
+                bool isNumber = long.TryParse(cleanCard, out _);
+
+                if (card == null || card == "" || !isNumber || cleanCard.Length < 16)
+                {
+                    Console.WriteLine("Invalid! Card number must be at least 16 digits.");
+                }
+                else
+                {
+                    card = cleanCard;
+                    break;
+                }
+            }
+
+            string nationalCode = "";
+            while (true)
+            {
+                Console.Write("National Code (10 digits): ");
+                nationalCode = Console.ReadLine();
+
+                string cleanNational = nationalCode.Replace(" ", "").Replace("-", "");
+                bool isNumber = long.TryParse(cleanNational, out _);
+
+                if (nationalCode == null || nationalCode == "" || !isNumber || cleanNational.Length != 10)
+                {
+                    Console.WriteLine("Invalid! National code must be exactly 10 digits.");
+                }
+                else
+                {
+                    nationalCode = cleanNational;
+                    break;
+                }
+            }
+
+            string birthYear = "";
+            while (true)
+            {
+                Console.Write("Birth Year: ");
+                birthYear = Console.ReadLine();
+
+                bool isNumber = int.TryParse(birthYear, out _);
+
+                if (birthYear == null || birthYear == "" || !isNumber)
+                {
+                    Console.WriteLine("Invalid! Birth year must be a number.");
+                }
+                else
+                {
+                    break;
+                }
+            }
 
             if (students.ContainsKey(nationalCode))
             {
@@ -173,27 +269,54 @@ namespace final_project
             Dictionary<string, string> s = students[nationalCode];
 
             Console.WriteLine($"Current Name: {s["FirstName"]} {s["LastName"]}");
+
             Console.Write("New First Name (press Enter to keep): ");
             string newFirstName = Console.ReadLine();
             if (newFirstName != "")
-                s["FirstName"] = newFirstName;
+            {
+                bool isNumber = int.TryParse(newFirstName, out _);
+                if (newFirstName.Length >= 3 && !isNumber)
+                    s["FirstName"] = newFirstName;
+                else
+                    Console.WriteLine("Name must be at least 3 letters and not a number! Keeping old value.");
+            }
 
             Console.Write("New Last Name (press Enter to keep): ");
             string newLastName = Console.ReadLine();
             if (newLastName != "")
-                s["LastName"] = newLastName;
+            {
+                bool isNumber = int.TryParse(newLastName, out _);
+                if (newLastName.Length >= 3 && !isNumber)
+                    s["LastName"] = newLastName;
+                else
+                    Console.WriteLine("Last name must be at least 3 letters and not a number! Keeping old value.");
+            }
 
             Console.Write("New Phone (press Enter to keep): ");
             string newPhone = Console.ReadLine();
             if (newPhone != "")
-                s["PhoneNumber"] = FormatPhoneNumber(newPhone);
+            {
+                string cleanPhone = newPhone.Replace(" ", "").Replace("-", "");
+                bool isNumber = long.TryParse(cleanPhone, out _);
+                if (isNumber)
+                    s["PhoneNumber"] = FormatPhoneNumber(cleanPhone);
+                else
+                    Console.WriteLine("Invalid phone number! Keeping old value.");
+            }
 
             Console.Write("New Card (press Enter to keep): ");
             string newCard = Console.ReadLine();
             if (newCard != "")
             {
-                s["CardNumber"] = newCard;
-                s["BankName"] = GetBankName(newCard);
+                string cleanCard = newCard.Replace(" ", "").Replace("-", "");
+                bool isNumber = long.TryParse(cleanCard, out _);
+                if (isNumber && cleanCard.Length >= 16)
+                {
+                    s["CardNumber"] = cleanCard;
+                    s["BankName"] = GetBankName(cleanCard);
+                }
+                else
+                    Console.WriteLine("Invalid card number! Keeping old value.");
             }
 
             Console.WriteLine("Student updated successfully!");
